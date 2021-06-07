@@ -1,0 +1,5 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <EditText android:id="@+id/search_bar" android:background="@drawable/edittext_shadow" android:paddingLeft="10dp" android:layout_width="match_parent" android:layout_height="45dp" android:layout_margin="10dp" android:hint="Search" android:maxLines="1" android:singleLine="true" android:drawableRight="@drawable/search_icon"/>
+    <ListView android:id="@+id/listMode" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp" android:layout_below="@+id/search_bar"/>
+    <com.leo.simplearcloader.SimpleArcLoader android:id="@+id/loader" android:visibility="visible" android:layout_width="60dp" android:layout_height="60dp" android:layout_centerInParent="true" app:arc_style="simple_arc"/>
+</RelativeLayout>

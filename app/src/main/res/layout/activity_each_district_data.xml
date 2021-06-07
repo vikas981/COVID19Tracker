@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="4dp" app:cardCornerRadius="8dp" app:cardElevation="4dp">
+                    <LinearLayout android:orientation="horizontal" android:padding="15dp" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2">
+                        <org.eazegraph.lib.charts.PieChart
+                            android:id="@+id/activity_each_district_piechart"
+                            android:padding="6dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_weight="1"
+                            app:egDrawValueInPie="true"
+                            app:egInnerPaddingColor="@color/white"
+                            app:egLegendHeight="0dp"
+                            app:egValueTextSize="0dp"/>
+
+                        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:paddingStart="36dp">
+                            <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                                <View android:background="@color/blue_pie" android:layout_width="15dp" android:layout_height="15dp"/>
+                                <TextView android:textSize="13sp" android:textColor="#000000" android:paddingLeft="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Active"/>
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                                <View android:background="@color/green_pie" android:layout_width="15dp" android:layout_height="15dp"/>
+                                <TextView android:textSize="13sp" android:textColor="#000000" android:paddingLeft="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recovered"/>
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                                <View android:background="@color/red" android:layout_width="15dp" android:layout_height="15dp"/>
+                                <TextView android:textSize="13sp" android:textColor="#000000" android:paddingLeft="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deaths"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <GridLayout android:layout_width="match_parent" android:layout_height="match_parent" android:rowCount="2" android:columnCount="2" android:alignmentMode="alignMargins">
+                <androidx.cardview.widget.CardView android:id="@+id/activity_each_district_confirmed_card" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="4dp" android:layout_marginRight="8dp" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardCornerRadius="8dp" app:cardElevation="4dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <TextView android:textSize="16sp" android:textColor="@color/dark_orange" android:gravity="center" android:id="@+id/activity_each_district_confirmed_title_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:text="Confirmed"/>
+                        <TextView android:textSize="24sp" android:textColor="#000" android:gravity="center" android:id="@+id/activity_each_district_confirmed_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp"/>
+                        <TextView android:textSize="16sp" android:textColor="@color/dark_orange" android:gravity="center" android:id="@+id/activity_each_district_confirmed_new_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="40dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/activity_each_distict_active_card" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginRight="8dp" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardCornerRadius="8dp" app:cardElevation="4dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <TextView android:textSize="16sp" android:textColor="@color/blue" android:gravity="center" android:id="@+id/activity_each_district_active_title_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:text="Active"/>
+                        <TextView android:textSize="24sp" android:textColor="#000" android:gravity="center" android:id="@+id/activity_each_district_active_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp"/>
+                        <TextView android:textSize="16sp" android:textColor="@color/blue" android:gravity="center" android:id="@+id/activity_each_district_active_new_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="40dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/activity_each_district_recovered_card" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardCornerRadius="8dp" app:cardElevation="4dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <TextView android:textSize="16sp" android:textColor="@color/green" android:gravity="center" android:id="@+id/activity_each_district_recovered_title_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:text="Recovered"/>
+                        <TextView android:textSize="24sp" android:textColor="#000" android:gravity="center" android:id="@+id/activity_each_district_recovered_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp"/>
+                        <TextView android:textSize="16sp" android:textColor="@color/green" android:gravity="center" android:id="@+id/activity_each_district_recovered_new_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="40dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/activity_each_district_death_card" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardCornerRadius="8dp" app:cardElevation="4dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <TextView android:textSize="16sp" android:textColor="@color/red" android:gravity="center" android:id="@+id/activity_each_district_death_title_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:text="Deaths"/>
+                        <TextView android:textSize="24sp" android:textColor="#000" android:gravity="center" android:id="@+id/activity_each_district_death_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp"/>
+                        <TextView android:textSize="16sp" android:textColor="@color/red" android:gravity="center" android:id="@+id/activity_each_district_death_new_textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="40dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

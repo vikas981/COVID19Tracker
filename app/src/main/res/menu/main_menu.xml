@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Dashboard">
+    <menu>
+        <item android:icon="@drawable/world" android:id="@+id/nav_home_world" android:title="World" />
+        <item android:icon="@drawable/india" android:id="@+id/nav_honme_india" android:title="India" />
+    </menu>
+    </item>
+
+    <item android:title="Stats">
+        <menu>
+            <item android:icon="@drawable/country" android:id="@+id/nav_world" android:title="Country" />
+            <item android:icon="@drawable/akshardham" android:id="@+id/nav_india" android:title="State" />
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <item android:icon="@drawable/share" android:id="@+id/nav_share" android:title="Share" />
+            <item android:icon="@drawable/rate_icon" android:id="@+id/nav_rate" android:title="Rate Us" />
+        </menu>
+    </item>
+
+    <item android:title="Settings">
+        <menu>
+            <item android:icon="@drawable/about" android:id="@+id/nav_about" android:title="About" />
+        </menu>
+    </item>
+</menu>
